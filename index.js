@@ -1,32 +1,17 @@
 const express = require("express");
-var morgan = require("morgan");
+
+const rootRouter = require("./routes/root");
+const userRouter = require("./routes/user");
+const productRouter = require("./routes/product");
 
 const app = express();
-app.use(morgan("combined"));
 app.set("views", "./views");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-
-app.get("/", (req, res) => {
-  res.render("home");
-});
-
-app.get("/products", (req, res) => {
-  res.render("products");
-});
-
-app.get("/faqs", (req, res) => {
-  res.render("faqs");
-});
-
-app.get("/contact", (req, res) => {
-  res.render("contact");
-});
-
-app.get("/about", (req, res) => {
-  res.render("about");
-});
+app.use("/", rootRouter);
+app.use("/users", userRouter);
+app.use("/products", productRouter);
 
 app.listen(3000, () => {
-  console.log("Server started!!!");
+  console.log("Server Started!!!");
 });
