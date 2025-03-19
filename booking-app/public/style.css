@@ -1,0 +1,140 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+/* Tiêu đề trang */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Bảng danh sách */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 12px 14px;
+  border-top: 1px solid #eee;
+}
+
+/* Trạng thái */
+.status-pending {
+  color: #856404;
+  background-color: #fff3cd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status-confirmed {
+  color: #155724;
+  background-color: #d4edda;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status-cancelled {
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Nút hành động */
+button, .btn {
+  padding: 8px 14px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-create {
+  background-color: #28a745;
+}
+
+.btn-create:hover {
+  background-color: #218838;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: black;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333;
+}
+
+/* Form đặt lịch */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
